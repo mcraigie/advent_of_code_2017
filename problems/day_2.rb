@@ -12,7 +12,7 @@ class Day2
     spreadsheet.map do |row|
       row.map do |divisor|
         row.map do |dividend|
-          dividend != divisor && dividend % divisor == 0  ? dividend / divisor : 0
+          dividend != divisor && (dividend % divisor).zero? ? dividend / divisor : 0
         end
       end
     end.flatten.sum
