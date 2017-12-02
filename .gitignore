@@ -1,0 +1,7 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# player specific inputs
+inputs
+
+# misc
+.DS_Store
