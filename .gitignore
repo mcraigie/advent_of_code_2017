@@ -2,6 +2,7 @@
 
 # player specific inputs
 inputs
+main.rb
 
 # misc
 .DS_Store
