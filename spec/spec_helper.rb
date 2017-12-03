@@ -99,5 +99,4 @@ RSpec.configure do |config|
 =end
 end
 
-Dir["./problems/*.rb"].each {|file| require file }
-
+Dir["./problems/*.rb"].each { |file| require file }
