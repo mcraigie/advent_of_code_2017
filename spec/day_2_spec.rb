@@ -1,7 +1,5 @@
 # Author:: Max Craigie  (@MaxCraigie)
 
-require_relative '../problems/day_2.rb'
-
 describe 'Day 2' do
   describe 'Problem 1' do
     it 'calculates the checksum of a spreadsheet' do

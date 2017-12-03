@@ -1,7 +1,5 @@
 # Author:: Max Craigie  (@MaxCraigie)
 
-require_relative '../problems/day_1.rb'
-
 describe 'Day 1' do
   describe 'Problem 1' do
     it 'calculates the correct captcha from 1122' do
