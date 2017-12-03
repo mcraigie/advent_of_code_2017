@@ -2,10 +2,10 @@
 
 class Day3
   def self.problem_1(target_number)
-    transforms = [[1, 0], [0, 1], [-1, 0], [0, -1]]
+    transforms = [[1, 0], [0, 1], [-1, 0], [0, -1]] # R, U, L, D
 
     current_number = 1
-    current_offset = [0, 0]
+    current_offset = [0, 0] # x, y
 
     momentum = 1 # number of times current direction is repeated
     countdown = momentum
