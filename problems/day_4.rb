@@ -3,14 +3,14 @@
 class Day4
   def self.problem_1(input)
     input.each_line.count do |passphrase|
-      !passphrase.split.any? { |word| passphrase.split.count(word) > 1 }
+      passphrase.split.all? { |word| passphrase.split.count(word) < 2 }
     end
   end
 
   def self.problem_2(input)
     input.each_line.count do |passphrase|
       sorted = passphrase.split.map { |word| word.chars.sort.join }
-      !sorted.any? { |e| sorted.count(e) > 1 }
+      sorted.all? { |e| sorted.count(e) < 2 }
     end
   end
 end
