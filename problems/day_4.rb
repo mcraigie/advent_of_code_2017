@@ -11,7 +11,7 @@ class Day4
   def self.problem_2(input)
     input.each_line.count do |passphrase|
       sorted_passphrase = passphrase.split.map { |word| word.chars.sort.join }
-      sorted_passphrase.all? { |e| sorted_passphrase.count(e) == 1 }
+      sorted_passphrase.all? { |word| sorted_passphrase.count(word) == 1 }
     end
   end
 end
