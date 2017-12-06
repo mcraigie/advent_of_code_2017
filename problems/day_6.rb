@@ -14,9 +14,8 @@ class Day6
       current_bank = largest_bank + 1
       banks[largest_bank] = 0
 
-      largest_bank_size.times do
-        banks[current_bank % banks.length] += 1
-        current_bank += 1
+      largest_bank_size.times do |n|
+        banks[(current_bank + n) % banks.length] += 1
       end
     end
 
@@ -36,9 +35,8 @@ class Day6
       current_bank = largest_bank + 1
       banks[largest_bank] = 0
 
-      largest_bank_size.times do
-        banks[current_bank % banks.length] += 1
-        current_bank += 1
+      largest_bank_size.times do |n|
+        banks[(current_bank + n) % banks.length] += 1
       end
     end
 
