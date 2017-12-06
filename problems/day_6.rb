@@ -8,22 +8,40 @@ class Day6
     until visited_states.include?(banks.hash)
       visited_states << banks.hash
 
-      most_blocks_count = banks.max
-      most_blocks_index = banks.find_index(most_blocks_count)
+      largest_bank_size = banks.max
+      largest_bank = banks.find_index(largest_bank_size)
 
-      current_index = most_blocks_index + 1
+      current_bank = largest_bank + 1
+      banks[largest_bank] = 0
 
-      most_blocks_count.times do
-        banks[most_blocks_index] -= 1
-        banks[current_index % banks.length] += 1
-        current_index += 1
+      largest_bank_size.times do
+        banks[current_bank % banks.length] += 1
+        current_bank += 1
       end
     end
 
     visited_states.length
   end
 
-  # def self.problem_2(input)
+  def self.problem_2(input)
+    banks = input.split.map(&:to_i)
+    visited_states = []
 
-  # end
+    until visited_states.include?(banks.hash)
+      visited_states << banks.hash
+
+      largest_bank_size = banks.max
+      largest_bank = banks.find_index(largest_bank_size)
+
+      current_bank = largest_bank + 1
+      banks[largest_bank] = 0
+
+      largest_bank_size.times do
+        banks[current_bank % banks.length] += 1
+        current_bank += 1
+      end
+    end
+
+    visited_states.length - visited_states.find_index(banks.hash)
+  end
 end
