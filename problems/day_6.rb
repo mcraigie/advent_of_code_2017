@@ -8,13 +8,12 @@ class Day6
     until visited_states.include?(banks.hash)
       visited_states << banks.hash
 
-      largest_bank_size = banks.max
-      largest_bank = banks.find_index(largest_bank_size)
+      max_blocks, largest_bank = banks.each_with_index.max_by { |n, i| [n, -i] }
 
       current_bank = largest_bank + 1
       banks[largest_bank] = 0
 
-      largest_bank_size.times do |n|
+      max_blocks.times do |n|
         banks[(current_bank + n) % banks.length] += 1
       end
     end
@@ -29,13 +28,12 @@ class Day6
     until visited_states.include?(banks.hash)
       visited_states << banks.hash
 
-      largest_bank_size = banks.max
-      largest_bank = banks.find_index(largest_bank_size)
+      max_blocks, largest_bank = banks.each_with_index.max_by { |n, i| [n, -i] }
 
       current_bank = largest_bank + 1
       banks[largest_bank] = 0
 
-      largest_bank_size.times do |n|
+      max_blocks.times do |n|
         banks[(current_bank + n) % banks.length] += 1
       end
     end
