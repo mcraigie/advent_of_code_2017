@@ -7,7 +7,7 @@ describe 'Day 6' do
     end
   end
 
-  describe 'Problem 1' do
+  describe 'Problem 2' do
     it 'calculates the length of repeating sequence of states' do
       expect(Day6.problem_2("0\t2\t7\t0")).to eq(4)
     end
