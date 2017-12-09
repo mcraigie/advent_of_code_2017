@@ -11,13 +11,13 @@ describe 'Day 8' do
   end
 
   describe 'Problem 1' do
-    it 'blah' do
+    it 'gives the largest remaining register value' do
       expect(Day8.problem_1(@input)).to eq(1)
     end
   end
 
   describe 'Problem 2' do
-    it 'blah' do
+    it 'gives highest value held in any register' do
       expect(Day8.problem_2(@input)).to eq(10)
     end
   end
