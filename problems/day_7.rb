@@ -20,8 +20,8 @@ class Day7
 
       if sub_weights.uniq.size > 1
         bad, good = sub_weights.group_by(&:itself)
-                                  .sort_by { |e| e.last.size }
-                                  .map(&:first)
+                               .sort_by { |e| e.last.size }
+                               .map(&:first)
 
         bad_program = programs[n[:sub_towers][sub_weights.find_index(bad)]]
         return bad_program[:own_weight] + (good - bad)
